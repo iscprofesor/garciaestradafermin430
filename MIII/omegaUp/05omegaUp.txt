@@ -1,0 +1,7 @@
+class program {
+  program () {
+        iterate(10)
+          move();
+        turnoff();
+    }
+}

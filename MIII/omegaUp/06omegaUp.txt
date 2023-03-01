@@ -1,0 +1,24 @@
+class program {
+  define turnright()
+    {
+     turnleft();
+     turnleft();
+     turnleft();
+    }
+  program () {
+        while (frontIsClear)
+          move();
+        turnright();  
+        while (frontIsClear) 
+          {
+           if (nextToABeeper)
+             {
+              pickbeeper();
+              move();
+             }
+          }
+        if (nextToABeeper)
+          pickbeeper();  
+        turnoff();
+    }
+}

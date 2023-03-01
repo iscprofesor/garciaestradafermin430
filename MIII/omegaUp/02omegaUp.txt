@@ -1,0 +1,58 @@
+class program {
+  
+  define turnright()
+    {
+     iterate(3)
+       turnleft();
+    }
+    
+  define fill()
+    {
+     putbeeper();
+     move();
+     putbeeper();
+     move();
+     putbeeper();
+     move();
+     putbeeper();
+    }
+    
+  define goBack()
+    {
+     turnleft();
+     turnleft();
+     move();
+     move();
+     move();
+    }
+    
+  define change()
+    {
+     turnleft();
+     move();
+     turnleft();
+    }
+  
+    program () {
+        
+        fill();
+        goBack();
+        change();
+        
+        fill();
+        goBack();
+        change();
+        
+        fill();
+        goBack();
+        change();
+        
+        fill();
+        goBack();
+        change();
+        
+        fill();
+        
+        turnoff();
+    }
+}

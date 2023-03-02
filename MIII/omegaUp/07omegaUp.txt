@@ -1,0 +1,53 @@
+class program {
+  
+  define turnright()
+    {
+     turnleft();
+     turnleft();
+     turnleft();
+    }
+    
+  define threeBeepers()
+    {
+     iterate (4)
+       {
+        iterate (4)
+          {
+           iterate (3)
+             putbeeper();
+           move();  
+          }
+        turnright();  
+       }
+    }
+    
+  define twoBeepers()
+    {
+     iterate (4)
+       {
+        iterate (2)
+          {
+           iterate (2)
+             putbeeper();
+           move();  
+          }
+        turnright();  
+       }
+    }  
+    
+    program () {
+        move();
+        threeBeepers();
+        move();
+        turnright();
+        move();
+        turnleft();
+        twoBeepers();
+        move();
+        turnright();
+        move();
+        turnleft();
+        putbeeper();
+        turnoff();
+    }
+}

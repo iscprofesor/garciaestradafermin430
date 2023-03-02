@@ -1,0 +1,37 @@
+class program 
+  {  
+   
+   void turnright()
+     {
+      turnleft();
+      turnleft();
+      turnleft();
+     }
+   void pickbeepers()
+     {
+      iterate(7)
+        {
+         turnright();
+         move();
+         turnleft();
+         move();
+         if (nextToABeeper)
+           {
+            pickbeeper();
+            
+           }
+        }
+     }
+    program () {
+        // Ejercicio 7: Re-escribe el programa para el ejercicio 4, pero esta vez puede no 
+        // haber un zumbador en cada esquina. Guarda tu programa con el nombre diagonal2.txt.   
+        // La nueva  instrucción debería coger un zumbador en la posición actual, si es que 
+        // lo hay. Deberías usar esta instrucción para coger todos los zumbadores mientras 
+        // Karel va a su casa en diagonal. Asegurate de que tienes el mundo diagonal.mdo cargado
+        // para probar tu programa. Karel debería finalizar en la esquina de la 1ªCalle con 
+        // la 1ªAvenida, con todos los zumbadores que ha ido cogiendo por el camino, y 
+        // apagarse.
+        pickbeepers();
+        turnoff();
+    }
+}

@@ -1,0 +1,22 @@
+class program 
+  {
+   
+   void avanza(n) 
+     {
+      iterate(n) 
+        {
+         if (frontIsClear)
+           {
+            move();
+           }
+        }
+     }
+   program () 
+     {
+      // Ejercicio 9: Escribe una nueva instrucción que avance a Karel 
+      // el número de veces que se le mande como parámetro. Debes de 
+      // evitar que Karel choque con alguna pared.
+      avanza(30);
+      turnoff();
+    }
+}

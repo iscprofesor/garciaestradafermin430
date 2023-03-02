@@ -1,0 +1,26 @@
+iniciar-programa
+  define-nueva-instruccion gira-derecha como
+    inicio
+      gira-izquierda;
+      gira-izquierda;
+      gira-izquierda;
+    fin;
+  define-nueva-instruccion coge-zumbadores como
+    inicio
+      repetir 7 veces inicio
+        gira-derecha;
+        avanza;
+        gira-izquierda;
+        avanza;
+        si junto-a-zumbador entonces
+          inicio
+            coge-zumbador;
+          fin;          
+      fin;
+    fin;
+    inicia-ejecucion
+        { Ejercicio 7: Re-escribe el programa para el ejercicio 4, pero esta vez puede no haber un zumbador en cada esquina. Guarda tu programa con el nombre diagonal2.txt.   La nueva  instrucción debería coger un zumbador en la posición actual, si es que lo hay. Deberías usar esta instrucción para coger todos los zumbadores mientras Karel va a su casa en diagonal. Asegúrate de que tienes el mundo diagonal.mdo cargado y probar vuestro programa. Karel debería finalizar el la esquina de la 1ªCalle con la 1ªAvenida, con todos los zumbadores que ha ido cogiendo por el camino, y apagarse. }
+        coge-zumbadores;
+        apagate;
+    termina-ejecucion
+finalizar-programa

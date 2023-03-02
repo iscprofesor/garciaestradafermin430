@@ -1,0 +1,31 @@
+class program {
+    program () {
+        // Ejercicio 6: La tarea de Karel es dejar zumbadores a lo largo 
+        // de una pista de carreras. Un ejemplo de dicha pista es la de 
+        // la siguiente imagen. Karel debe dar una vuelta completa y 
+        // depositar un zumbador en cada esquina a lo largo del camino. 
+        // Guarda el programa con el nombre pistaCarreras.txt. 
+        // Tu solución debe usar sentencias while. Construye el mundo 
+        // inicial de la siguiente imagen con el nombre pistaCarreras.mdo. 
+        // Asegurate de poner dentro de la mochila suficientes zumbadores 
+        // para todas las esquinas. El ejemplo requiere 22 zumbadores. 
+        // Karel debe empezar en cualquier intersección de la pista.
+        while(notnextToABeeper)
+          {
+           if (frontIsClear)
+             {
+              putbeeper();
+              move();
+             }
+           else
+             {
+              putbeeper();
+              turnleft();
+              turnleft();
+              turnleft();
+              move();
+             }
+          }
+        turnoff();
+    }
+}

@@ -1,0 +1,46 @@
+iniciar-programa
+    inicia-ejecucion
+        { Ejercicio 5 :   Karel tiene la tarea de alinear una colección de zumbadores en la primera Calle que ha sido distribuida desigualmente. Empieza en la 1ªCalle y la 15ªAvenida y está orientado al Oeste. Se supone que en cada esquina hay exactamente un zumbador. Sin embargo, Karel puede encontrar 0, 1 o 2 zumbadores en cualquier intersección. Su tarea es asegurar que exactamente hay un zumbador antes de continuar hacia la siguiente esquina. Cuando llega a la esquina 1,1 debe apagarse. }
+        mientras frente-libre hacer 
+          inicio
+            si no-junto-a-zumbador entonces 
+              inicio
+                deja-zumbador;
+                avanza;
+              fin  
+            sino inicio
+              si junto-a-zumbador entonces 
+                inicio
+                  coge-zumbador;
+                  si junto-a-zumbador entonces 
+                    inicio
+                      avanza;
+                    fin  
+                  sino 
+                    inicio
+                      deja-zumbador;
+                      avanza;
+                    fin;
+                 fin;
+               fin;
+          fin;
+        si no-junto-a-zumbador entonces 
+              inicio
+                deja-zumbador;
+              fin  
+            sino inicio
+              si junto-a-zumbador entonces 
+                inicio
+                  coge-zumbador;
+                  si junto-a-zumbador entonces 
+                    inicio
+                    fin  
+                  sino 
+                    inicio
+                      deja-zumbador;
+                    fin;
+                 fin;
+               fin;  
+        apagate;
+    termina-ejecucion
+finalizar-programa

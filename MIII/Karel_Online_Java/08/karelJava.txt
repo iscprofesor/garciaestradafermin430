@@ -1,0 +1,48 @@
+class program 
+  {
+  
+   void turnRight() 
+     {
+      turnleft();
+      turnleft();
+      turnleft();
+     }
+  
+   void followRightWall() 
+     {
+      if (frontIsBlocked && rightIsBlocked)
+        {
+         turnleft();
+        }
+      if (frontIsClear && rightIsBlocked)
+        {
+         move();
+        }
+      if (rightIsClear)
+        {
+         turnRight();
+         move();
+        }  
+     }
+     
+    program () {
+        // Ejercicio 8: Escribe un programa que ayude a Karel a escapar de 
+        // un laberinto que no contiene islas (cuadrados aislados). 
+        // La salida del laberinto está marcada ubicando un zumbador en la 
+        // primera esquina que está fuera del laberinto, al lado del muro 
+        // de la derecha. Una forma de resolver este problema es hacer que 
+        // Karel avance a lo largo del laberinto siguiendo el muro de su 
+        // derecha ( imagina que está tocando el muro y que nunca puede 
+        // despegar su mano de él). En la siguiente imagen hay un ejemplo 
+        // de un laberinto del cual debería ser capaz de salir (no olvides 
+        // que tu programa debería funcionar en todos los laberintos, 
+        // no solo en el de la imagen). Guarda tu programa con el nombre 
+        // laberinto.txt. Esto parece muy, muy complicado. ¿Puedes darnos 
+        // un mundo de ejemplo?
+        while (notNextToABeeper)
+          {
+           followRightWall();
+          } 
+        turnoff();
+    }
+}

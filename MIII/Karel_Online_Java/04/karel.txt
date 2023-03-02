@@ -1,0 +1,15 @@
+iniciar-programa
+    inicia-ejecucion
+        { Ejercicio 4: Asume que Karel está en la esquina de la 8ªAvenida y la 8ªCalle, con el escenario que se ve en la siguiente imagen. Escribe un programa que haga a Karel recoger todos los zumbadores y acabe en la 1ªesquina orientado al Sur. }
+        repetir 7 veces inicio
+          gira-izquierda;
+          gira-izquierda;
+          gira-izquierda;
+          avanza;
+          gira-izquierda;
+          avanza;
+          coge-zumbador;
+        fin;
+        apagate;
+    termina-ejecucion
+finalizar-programa

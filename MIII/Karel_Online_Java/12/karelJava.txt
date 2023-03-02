@@ -1,0 +1,55 @@
+class program {
+  
+  define turnright()
+    {
+     turnleft();
+     turnleft();
+     turnleft();
+    }
+  
+  void recursivaH () 
+    {
+     if (notNextToABeeper) 
+       {
+        if (frontIsClear)
+          {
+           move();
+           if ((frontIsBlocked) && (facingWest))
+             {
+              turnleft();
+              putbeeper();
+              move();
+             }
+          }   
+        recursivaH();
+        if ((nextToABeeper) && (facingSouth))
+          {
+           pickbeeper();
+           turnleft();
+           turnleft();
+           move();
+          }
+        if ((nextToABeeper) && (facingNorth))
+          {
+           turnright();
+           move();
+          } 
+        else
+          move();
+       }
+    }
+    program () {
+        turnright();
+        move();
+        move();
+        turnleft();
+        
+        recursivaH();
+        
+        turnright();
+        move();
+        move();
+        putbeeper();
+        turnoff();
+    }
+}

@@ -1,0 +1,35 @@
+class program {
+  void avanzaSiNoEsCero (n) 
+    {
+     if ( iszero(n) ) 
+       {
+        turnleft();
+       }
+     else
+       {
+        iterate (n) 
+         {
+          move();
+         }
+       }
+    }
+  void ponga (n) 
+    {
+     if ( iszero(n) ) 
+       {
+        pickbeeper();
+       }
+     else
+       {
+        iterate (pred(n))
+          putbeeper();
+       }
+    }  
+    program () {
+        // Ejercicio 11: Define una nueva instrucción que 
+        // haga que Karel ponga "n" zumbadores en donde se 
+        // encuentra, pero si "n" es cero, recoja 1 
+        // zumbador.
+        ponga(10);
+    }
+}
